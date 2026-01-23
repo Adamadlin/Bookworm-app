@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Bookworm</string>
+    <string name="library_logo">Library Logo</string>
+    <string name="bookworm_library">Bookworm Library</string>
+    <string name="see_available_books">See Available Books</string>
+    <string name="my_list">My List</string>
+    <string name="add_to_list">Add to List</string>
+    <string name="book_cover">Book cover</string>
+    <string name="return_book">Return Book</string>
+    <string name="set_up_a_reminder">Set Up a Reminder</string>
 </resources>

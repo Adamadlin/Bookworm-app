@@ -42,16 +42,33 @@
             android:calendarViewShown="false"
             app:layout_constraintTop_toBottomOf="@id/textMyListAuthor"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="10dp"/>
-
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:theme="@style/DatePickerTheme"
+            android:background="@color/white"
+            />
         <Button
             android:id="@+id/buttonSetReminder"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Set Up a Reminder"
+            android:text="@string/set_up_a_reminder"
             app:layout_constraintTop_toBottomOf="@id/datePickerReturn"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="10dp"/>
+            app:layout_constraintEnd_toStartOf="@id/buttonReturnBook"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#18a86f"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/buttonReturnBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/return_book"
+            app:layout_constraintTop_toBottomOf="@id/buttonSetReminder"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="#18a86f"
+            android:textColor="@color/white" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -17,9 +17,10 @@
             android:id="@+id/imageBookCover"
             android:layout_width="70dp"
             android:layout_height="90dp"
-            android:contentDescription="Book cover"
+            android:contentDescription="@string/book_cover"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
         <TextView
             android:id="@+id/textBookTitle"
@@ -29,7 +30,6 @@
             android:textStyle="bold"
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@id/imageBookCover"
-            app:layout_constraintTop_toTopOf="@id/imageBookCover"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="12dp"/>
 
@@ -48,10 +48,12 @@
             android:id="@+id/buttonAddToList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add to List"
+            android:text="@string/add_to_list"
             app:layout_constraintStart_toStartOf="@id/textBookTitle"
             app:layout_constraintTop_toBottomOf="@id/textBookAuthor"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#18a86f"
+            android:textColor="@color/white"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

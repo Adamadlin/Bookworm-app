@@ -4,4 +4,12 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+    <style name="DatePickerTheme" parent="Theme.MaterialComponents.Light.Dialog">
+        <!-- tint for header/controls -->
+        <item name="colorPrimary">#18a86f</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <!-- older attributes for platform widgets -->
+        <item name="colorAccent">#18a86f</item>
+        <item name="android:colorControlActivated">#18a86f</item>
+    </style>
 </resources>

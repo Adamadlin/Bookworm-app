@@ -40,6 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:calendarViewShown="false"
+            android:datePickerMode="spinner"
             app:layout_constraintTop_toBottomOf="@id/textMyListAuthor"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +55,7 @@
             android:text="@string/set_up_a_reminder"
             app:layout_constraintTop_toBottomOf="@id/datePickerReturn"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/buttonReturnBook"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="10dp"
             android:backgroundTint="#18a86f"
             android:textColor="@color/white" />
@@ -66,15 +67,11 @@
             android:text="@string/return_book"
             app:layout_constraintTop_toBottomOf="@id/buttonSetReminder"
             android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:backgroundTint="#18a86f"
             android:textColor="@color/white" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--
-    item_book_my_list.xml:
-    One RecyclerView row for user's saved list.
-    Shows title/author + DatePicker for return date + reminder button.
-    -->
 </androidx.cardview.widget.CardView>

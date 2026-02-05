@@ -49,7 +49,7 @@ public class MyListActivity extends AppCompatActivity {
         myListBooks = BookStorage.loadMyList(this);
 
         // Show late warnings when user returns to this screen
-        MyListAdapter.showLateWarnings(this, myListBooks);
+//        MyListAdapter.showLateWarnings(this, myListBooks);
 
         int fine = MyListAdapter.calculateTotalFine(myListBooks);
         textTotalFine.setText("Total fine: $" + fine);

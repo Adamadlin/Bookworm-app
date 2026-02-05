@@ -25,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
         buttonMyList = findViewById(R.id.buttonMyList);
 
         buttonBrowseBooks.setOnClickListener(v -> {
-            Toast.makeText(this, "Opening available books...", Toast.LENGTH_SHORT).show();
+          //  Toast.makeText(this, "Opening available books...", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this, BrowseBooksActivity.class);
             startActivity(intent);
         });
 
         buttonMyList.setOnClickListener(v -> {
-            Toast.makeText(this, "Opening your list...", Toast.LENGTH_SHORT).show();
+        //    Toast.makeText(this, "Opening your list...", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this, MyListActivity.class);
             startActivity(intent);
         });

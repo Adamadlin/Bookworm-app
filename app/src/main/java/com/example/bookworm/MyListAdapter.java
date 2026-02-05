@@ -58,6 +58,15 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyListView
                     calendar.get(Calendar.MONTH),
                     calendar.get(Calendar.DAY_OF_MONTH)
             );
+            // Requirement 2: User can only set one date reminder per book.
+            // If already set, we disable the ability to set it again.
+            holder.buttonSetReminder.setEnabled(false);
+            holder.buttonSetReminder.setText("Reminder Set");
+            holder.datePickerReturn.setEnabled(false);
+        } else {
+            holder.buttonSetReminder.setEnabled(true);
+            holder.buttonSetReminder.setText("Set up a reminder");
+            holder.datePickerReturn.setEnabled(true);
         }
 
         holder.buttonSetReminder.setOnClickListener(v -> {
@@ -70,6 +79,25 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyListView
 
             int fine = calculateTotalFine(myListBooks);
             fineChangedListener.onFineChanged(fine);
+            
+            // Disable after setting
+            notifyItemChanged(holder.getAdapterPosition());
+        });
+
+        holder.buttonReturnBook.setOnClickListener(v -> {
+            int currentPos = holder.getAdapterPosition();
+            if (currentPos != RecyclerView.NO_POSITION) {
+                // Requirement 1: Remove book from list and "permanent notification" (handled by removal)
+                myListBooks.remove(currentPos);
+                BookStorage.saveMyList(context, myListBooks);
+                notifyItemRemoved(currentPos);
+                
+                // Update fine
+                int fine = calculateTotalFine(myListBooks);
+                fineChangedListener.onFineChanged(fine);
+
+                Toast.makeText(context, "Book returned and removed from your list.", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 
@@ -146,6 +174,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyListView
         TextView textMyListAuthor;
         DatePicker datePickerReturn;
         Button buttonSetReminder;
+        Button buttonReturnBook;
 
         public MyListViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -154,6 +183,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyListView
             textMyListAuthor = itemView.findViewById(R.id.textMyListAuthor);
             datePickerReturn = itemView.findViewById(R.id.datePickerReturn);
             buttonSetReminder = itemView.findViewById(R.id.buttonSetReminder);
+            buttonReturnBook = itemView.findViewById(R.id.buttonReturnBook);
         }
     }
 }

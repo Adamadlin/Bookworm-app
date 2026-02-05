@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.Bookworm" parent="Base.Theme.Bookworm" />
+    <style name="DatePickerTheme" parent="Theme.MaterialComponents.Light.Dialog">
+        <!-- tint for header/controls -->
+        <item name="colorPrimary">#18a86f</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <!-- older attributes for platform widgets -->
+        <item name="colorAccent">#18a86f</item>
+        <item name="android:colorControlActivated">#18a86f</item>
+    </style>
 </resources>

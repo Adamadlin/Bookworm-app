@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Main Activity Layout
+    The landing screen of the Bookworm app.
+    Key Components:
+    - imageLibraryLogo: Displays the application logo.
+    - textWelcome: Welcomes the user to the library.
+    - buttonBrowseBooks: Navigation button to BrowseBooksActivity.
+    - buttonMyList: Navigation button to MyListActivity.
+-->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -53,10 +62,4 @@
         android:backgroundTint="#18a86f"
         android:textColor="@color/white" />
 
-    <!--
-    activity_main.xml:
-    Main screen using ConstraintLayout.
-    Shows app logo + 2 buttons for navigation:
-    BrowseBooksActivity and MyListActivity.
-    -->
 </androidx.constraintlayout.widget.ConstraintLayout>

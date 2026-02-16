@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    My List Book Item Layout
+    Defines how each book appears in the user's personal list.
+    Key Components:
+    - textMyListTitle: Displays the title of the book in the user's list.
+    - textMyListAuthor: Displays the author of the book.
+    - datePickerReturn: Allows the user to select or view the return date.
+    - buttonSetReminder: Button to set up a notification reminder for the book.
+    - buttonReturnBook: Button to remove the book from the user's list (returning it).
+-->
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -17,7 +27,7 @@
             android:id="@+id/textMyListTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Title"
+            android:text="@string/title"
             android:textStyle="bold"
             android:textSize="16sp"
             app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +38,7 @@
             android:id="@+id/textMyListAuthor"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Author"
+            android:text="@string/author"
             android:textSize="14sp"
             app:layout_constraintTop_toBottomOf="@id/textMyListTitle"
             app:layout_constraintStart_toStartOf="parent"

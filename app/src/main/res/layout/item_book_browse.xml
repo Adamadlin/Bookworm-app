@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Browse Book Item Layout
+    Defines the visual representation of a single book in the browse list.
+    Key Components:
+    - imageBookCover: Displays the cover image of the book.
+    - textBookTitle: Displays the title of the book.
+    - textBookAuthor: Displays the author of the book.
+    - buttonAddToList: Button allowing the user to add the book to their personal list.
+-->
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -26,18 +35,19 @@
             android:id="@+id/textBookTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Title"
+            android:text="@string/title"
             android:textStyle="bold"
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@id/imageBookCover"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="12dp"/>
+            android:layout_marginStart="12dp" />
 
         <TextView
             android:id="@+id/textBookAuthor"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Author"
+            android:text="@string/author"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/textBookTitle"
             app:layout_constraintTop_toBottomOf="@id/textBookTitle"
@@ -57,9 +67,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--
-    item_book_browse.xml:
-    One RecyclerView row for browsing books.
-    Uses CardView + ImageView + TextViews + Add button.
-    -->
 </androidx.cardview.widget.CardView>

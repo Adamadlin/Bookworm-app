@@ -28,6 +28,6 @@
     <!--
     activity_browse_books.xml:
     Screen for browsing library books.
-    Contains a RecyclerView that uses item_book_browse.xml rows.
+    Contains a RecyclerView that uses item_book_browse.xml rows of CardView items.
     -->
 </androidx.constraintlayout.widget.ConstraintLayout>

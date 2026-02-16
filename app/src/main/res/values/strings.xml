@@ -11,4 +11,7 @@
     <string name="total_fine_0">Total fine: $0</string>
     <string name="my_list_2">My List</string>
     <string name="available_books">Available Books</string>
+    <string name="title">Title</string>
+    <string name="author">Author</string>
+    <string name="reminder_set">Reminder Set</string>
 </resources>

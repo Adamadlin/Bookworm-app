@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Browse Books Activity Layout
+    This screen allows users to view a list of all available books in the library.
+    Key Components:
+    - textBrowseHeader: Displays the "Available Books" title.
+    - recyclerAvailableBooks: A RecyclerView that dynamically populates books using item_book_browse.xml.
+-->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -25,9 +32,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!--
-    activity_browse_books.xml:
-    Screen for browsing library books.
-    Contains a RecyclerView that uses item_book_browse.xml rows.
-    -->
 </androidx.constraintlayout.widget.ConstraintLayout>

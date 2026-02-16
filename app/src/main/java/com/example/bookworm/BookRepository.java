@@ -3,20 +3,23 @@ package com.example.bookworm;
 import java.util.ArrayList;
 
 /**
- * BookRepository provides the available library books (hardcoded list for this project).
- * Uses local drawable images (res/drawable) instead of URLs for covers.
+ * BookRepository acts as a data provider for the library's catalog.
+ * For this project, it provides a hardcoded list of programming books,
+ * each associated with local cover images and information URLs.
  */
 public class BookRepository {
 
     /**
-     * Returns a list of available programming books for browsing.
-     * Each book includes: title, author, local cover drawable, and a website link.
+     * Generates and returns a static list of available library books.
+     * This simulates a database or network call by returning a predefined set of Book objects.
+     * Each book includes its title, author, local resource ID for the cover, and a website URL.
      *
-     * @return ArrayList of Book objects
+     * @return An ArrayList containing the catalog of available books.
      */
     public static ArrayList<Book> getAvailableBooks() {
         ArrayList<Book> books = new ArrayList<>();
 
+        // Add "Clean Code" to the catalog
         books.add(new Book(
                 "Clean Code",
                 "Robert C. Martin",
@@ -24,6 +27,7 @@ public class BookRepository {
                 "https://www.oreilly.com/library/view/clean-code/9780136083238/"
         ));
 
+        // Add "Effective Java" to the catalog
         books.add(new Book(
                 "Effective Java (3rd Edition)",
                 "Joshua Bloch",
@@ -31,6 +35,7 @@ public class BookRepository {
                 "https://www.oreilly.com/library/view/effective-java-3rd/9780134686097/"
         ));
 
+        // Add "Design Patterns" to the catalog
         books.add(new Book(
                 "Design Patterns: Elements of Reusable Object-Oriented Software",
                 "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
@@ -38,6 +43,7 @@ public class BookRepository {
                 "https://www.oreilly.com/library/view/design-patterns-elements/0201633612/"
         ));
 
+        // Add "Black Hat Python" to the catalog
         books.add(new Book(
                 "Black Hat Python (2nd Edition)",
                 "Justin Seitz, Tim Arnold",
@@ -45,6 +51,7 @@ public class BookRepository {
                 "https://nostarch.com/black-hat-python2E"
         ));
 
+        // Add "The Pragmatic Programmer" to the catalog
         books.add(new Book(
                 "The Pragmatic Programmer (20th Anniversary Edition)",
                 "Andrew Hunt, David Thomas",
@@ -55,10 +62,3 @@ public class BookRepository {
         return books;
     }
 }
-
-/*
-BookRepository.java:
-This class is a simple data provider for the app.
-It builds and returns an ArrayList<Book> that is used by BrowseBooksActivity to display
-the available books in a RecyclerView. Each book uses a local drawable image from res/drawable.
-*/

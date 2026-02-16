@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    My List Activity Layout
+    This screen displays the books that the user has added to their personal collection.
+    Key Components:
+    - textMyListHeader: Displays the "My List" header.
+    - textTotalFine: Displays the total fine accumulated for late returns.
+    - recyclerMyList: A RecyclerView that lists the books using item_book_my_list.xml.
+-->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -38,9 +46,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!--
-    activity_my_list.xml:
-    Screen for user's selected books.
-    Displays total fine and a RecyclerView using item_book_my_list.xml rows.
-    -->
 </androidx.constraintlayout.widget.ConstraintLayout>
